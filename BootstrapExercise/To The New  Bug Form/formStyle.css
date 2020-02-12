@@ -1,0 +1,73 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-default{
+	border: none;
+	 box-shadow: 2px 5px 3px #ccc;
+    
+}
+
+.navbar-default .navbar-brand{
+	color:rgb(93,188,210);
+	font-size: 28px;
+}
+
+
+.navbar-default .navbar-collapse .navbar-nav li a{
+	color: rgb(93,188,210);
+	font-size: 16px;
+}
+
+
+.divCol6{
+	 
+	 border: 1px solid rgb(185,193,204);
+	 border-radius: 5px
+}
+
+.report{
+	background-color: rgb(185,193,204);
+	color: white;
+	padding-left: 10px;
+}
+
+.forminput{
+	padding: 15px;
+}
+.verinput{
+	width: 30%;
+}
+.radiofirst{
+	margin-right: 150px;
+}
+.forminput select{
+	background-color: rgb(8,196,158);
+	color: white;
+}
+.chbtndiv{
+	 padding-top: 25px;
+}
+.chfilebtn{
+	background-color: #ccc;
+	color: white;
+}
+.rowbtn{
+	background-color: rgb(185,193,204);
+	padding: 10px;
+}
+.subbtn{
+	background-color: rgb(8,196,158);
+	color: white;
+	border: none;;
+}
+
+@media only screen and (max-width: 600px) {
+ 	.verinput{
+	width: 100%;
+	}
+	.radiofirst{
+			margin-right: 0px;
+		}
+}
