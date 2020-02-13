@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>question 4</title>
+</head>
+<body>
+    <p>
+        Show Shallow Copy :
+    </p>
+    <input type="button"value="shallow copy" onclick="shallowCopy()" ></input>
+    <br/>
+    <hr/>
+    <p>
+        Show Deep Copy :
+    </p>
+    <input type="button" onclick="deepCopy()" value="Deep Copy"></input>
+
+
+    <script>
+       function shallowCopy() {
+
+           var objectOne ={
+               name : "Aakash Sinha",
+               age: 23,
+               salary: 375000,
+               dateOfBirth: new Date("09 April 1996")
+           }
+           console.log("salary original : "+objectOne.salary);
+            var objectCopy = objectOne;
+
+           objectCopy.salary=450000;
+           console.log("After changing the salary of objectcopy - objectCopy.salary=450000;")
+
+           console.log("salary new is: "+objectOne.salary);
+       }
+
+       function deepCopy(){
+
+           var objectOne ={
+               name : "Aakash Sinha",
+               age: 23,
+               salary: 375000,
+               dateOfBirth: new Date("09 April 1996")
+           }
+
+           var objectCopy={
+               name:objectOne.name,
+               age:objectOne.age,
+               salary:objectOne.salary,
+               dateOfBirth: objectOne.dateOfBirth
+           }
+
+           objectCopy.salary=450000;
+           objectCopy.dateOfBirth= "09 September 1996"
+           console.log(objectOne.salary);
+           console.log(objectOne.dateOfBirth);
+           console.log(objectCopy.salary);
+           console.log(objectCopy.dateOfBirth);
+       }
+    </script>
+</body>
+</html>

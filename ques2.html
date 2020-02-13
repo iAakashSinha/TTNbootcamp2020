@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    function palindrome(){
+        var str=prompt("Enter the string");
+        var len = str.length;
+
+        var mid = Math.floor(len/2);
+        for ( var i = 0; i < mid; i++ ) {
+            if (str[i] !== str[len - 1 - i]) {
+                alert("String is not palindrome");
+                return;
+            }
+        }
+        alert("String is palindrome");}
+</script>
+<p>Press the button to check for palindrome :</p>
+<input type="button" value="Check Palindrome" onclick="palindrome()">
+</body>
+</html>

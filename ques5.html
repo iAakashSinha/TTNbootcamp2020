@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ques 5</title>
+</head>
+<body>
+    <script>
+    function ques5() {
+
+        //---------------------------------------------------------------------------------------------------------------
+        // Ques 1: create a list of objects of Employee with info as follow : Name, age, salary ,DOB
+
+        var listOfEmployeeObject =[
+            {   name : "Aakash Sinha",
+                age: 23,
+                salary: 5000,
+                dateOfBirth: new Date("09 April 1996")
+            },
+            {   name : "Aayushi thani",
+                age: 22,
+                salary: 300,
+                dateOfBirth: new Date("27 january 1997")
+            },
+            {   name : "Shobhit Bisaria",
+                age: 23,
+                salary: 5001,
+                dateOfBirth: new Date("19 december 1996")
+            },
+            {   name : "Aastha dawar",
+                age: 21,
+                salary: 500,
+                dateOfBirth: new Date("02 february 1998")
+            },
+            {   name : "Employee 5",
+                age: 20,
+                salary: 350,
+                dateOfBirth: new Date("09 feb 1999")
+            },
+        ]
+        //---------------------------------------------------------------------------------------------------------------
+        //Question 2 filter all employees with salary greater than 5000
+
+        var result = listOfEmployeeObject.filter(listOfEmployeeObject => listOfEmployeeObject.salary >5000);
+        console.log("Total number of Employee with salary greater than 5000 : " + result.length);
+
+        for(let i=0;i<result.length;i++){
+            console.log("employee number: "+ result[i].name);
+        }
+
+        //--------------------------------------------------------------------------------------------------------------
+        //Question 3 group employee on the basis of their age
+
+
+
+        //--------------------------------------------------------------------------------------------------------------
+        //Question 4 fetch employees with salary less than 1000 and age greater than 20. Then give them an increment 5 times their salary.
+        console.log("Question 4 fetch employees with salary less than 1000 and age greater than 20. Then give them an increment 5 times their salary.");
+
+            listOfEmployeeObject.forEach(function (item) {
+
+                if(item.salary<1000 && item.age>20)
+                {
+                    // op3res+="<span>"+item.name+"</span><br><span>"+(item.salary)*5+"</span>";
+                    console.log("Name : "+item.name +" Age : " + item.age + " Salary : "+item.salary);
+                }
+
+            })
+
+
+    }
+
+
+    </script>
+
+    <input type="button" value="click Me" onclick="ques5()"/>
+</body>
+</html>

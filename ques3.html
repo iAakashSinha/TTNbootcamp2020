@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Calc(){
+            var radius = document.getElementById("radius").value;
+            if((typeof(radius))=="string" && radius!=null)
+            {
+                var area = 0.5*3.14*radius*radius;
+                document.getElementById("div").innerText = "Area of the circle is: "+area;
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="number" id="radius" placeholder="enter the radius" >
+<button onclick="Calc()">Area</button>
+
+<div id="div"></div>
+</body>
+</html>
