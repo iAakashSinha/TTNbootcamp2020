@@ -1,4 +1,4 @@
-//Design classes having attributes for furniture where there are wooden chairs and tables, metal chairs and tables.
+//Ques 9: Design classes having attributes for furniture where there are wooden chairs and tables, metal chairs and tables.
 // There are stress and fire tests for each products.
 
 import javafx.scene.control.Tab;

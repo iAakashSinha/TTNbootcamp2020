@@ -1,4 +1,4 @@
-//WAP showing try, multi-catch and finally blocks.
+//Ques 6: WAP showing try, multi-catch and finally blocks.
 
 import java.util.Scanner;
 

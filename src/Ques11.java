@@ -1,4 +1,4 @@
-//Convert the following code so that it uses nested while statements instead of for statements:
+//Ques11: Convert the following code so that it uses nested while statements instead of for statements:
 //        int s = 0;
 //        int t = 1;
 //        for (int i = 0; i < 10; i++)

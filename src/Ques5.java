@@ -1,4 +1,4 @@
-//WAP to show object cloning in java using cloneable and copy constructor both.
+//Ques 5: WAP to show object cloning in java using cloneable and copy constructor both.
 
 import java.lang.Cloneable;
 

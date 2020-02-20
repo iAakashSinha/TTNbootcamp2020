@@ -1,4 +1,4 @@
-//What will be the  output on new Child(); ?
+//Ques 12: What will be the  output on new Child(); ?
 
 public class Ques12 {
     public static void main(String[] args) {

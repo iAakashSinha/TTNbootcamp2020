@@ -1,4 +1,4 @@
-//WAP to create singleton class.
+//Ques 4: WAP to create singleton class.
 
 public class Ques4 {
 

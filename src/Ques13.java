@@ -1,4 +1,4 @@
-//Create a custom exception that do not have any stack trace.
+//Ques 13: Create a custom exception that do not have any stack trace.
 
 import java.util.Scanner;
 

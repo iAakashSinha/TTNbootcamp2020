@@ -1,4 +1,4 @@
-//WAP to convert seconds into days, hours, minutes and seconds.
+//Ques 7: WAP to convert seconds into days, hours, minutes and seconds.
 
 import java.util.Scanner;
 
