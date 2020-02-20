@@ -1,24 +1,52 @@
-//Ques 3: WAP to produce ClassNotFoundException exception.
+//Ques 3a: Write a program using synchronization method
 
 public class Ques3a {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
+        Line obj = new Line();
 
-    ClassNotFoundExceptionClass cnfe = new ClassNotFoundExceptionClass();
-    cnfe.cnfeEcample();
+        Train train1 = new Train(obj);
+        Train train2 = new Train(obj);
+
+        train1.start();
+        train2.start();
+    }
+
+}
+
+
+class Line
+{
+    synchronized public void getLine()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            System.out.println(i);
+            try
+            {
+                Thread.sleep(400);
+            }
+            catch (Exception e)
+            {
+                System.out.println(e);
+            }
+        }
     }
 }
 
-class ClassNotFoundExceptionClass{
-    public void cnfeEcample(){
-        try
-        {
-            Class.forName("Aakash_test");
-        }
-        catch (ClassNotFoundException ex)
-        {
-            ex.printStackTrace();
-        }
+class Train extends Thread
+{
+    Line line;
+
+    Train(Line line)
+    {
+        this.line = line;
+    }
+
+    @Override
+    public void run()
+    {
+        line.getLine();
     }
 }
-
 

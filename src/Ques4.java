@@ -1,35 +1,42 @@
-//Ques 4: WAP to create singleton class.
+//Write a program to create a Thread pool of 2 threads where one Thread will print even numbers
+// and other will print odd numbers.
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Ques4 {
 
     public static void main(String[] args) {
+        ExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
 
-        SingletonClass obj1 = SingletonClass.getInstance();
-        SingletonClass obj2 = SingletonClass.getInstance();
-        SingletonClass obj3 = SingletonClass.getInstance();
-
-//
-        System.out.println("HashCode for obj1 "+ obj1.hashCode());
-        System.out.println("HashCode for obj2 "+ obj2.hashCode());
-        System.out.println("HashCode for obj3 "+ obj3.hashCode());
+        executorService.submit(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Thread 1 to print Even Number is running");
+                for(int i=0;i<10;i+=2){
+                    System.out.println(i);
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+        executorService.submit(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Thread 1 to print Odd Number is running");
+                for(int i=1;i<10;i+=2){
+                    System.out.println(i);
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+        executorService.shutdown();
     }
 }
-
-class SingletonClass{
-
-    private static SingletonClass singletonObject= null;
-
-    private SingletonClass(){
-        System.out.print("This is an Object of Singleton Class with hash Code : ");
-        System.out.println(this.hashCode());
-    }
-
-    public static SingletonClass getInstance(){
-        if(singletonObject==null){
-            singletonObject = new SingletonClass();
-        }
-        return singletonObject;
-    }
-}
-
-

@@ -1,43 +1,40 @@
-//Ques 2: WAP for sorting string without using string Methods?.
-
-import java.util.Scanner;
+//Ques2: Write a program to create a thread using Thread class and Runnable interface each.
 
 public class Ques2 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Please enter a String: ");
-        String original = sc.nextLine();
-        int j = 0;
-        char temp = 0;
+        System.out.println("This is Main Thread ");
+        System.out.println("Current Thread: "+ Thread.currentThread().getName());
 
-        char[] chars = original.toLowerCase().toCharArray();
+        UsingRunnableInterface threadFromRunnable = new UsingRunnableInterface();
+        Thread T = new Thread(threadFromRunnable);
+        T.start();
 
-        for (int i = 1; i < chars.length; i++) {
-//                if(chars[i]==' '){
-//                    chars[i]='';
-//                }
-            for (j = 0; j < chars.length; j++) {
-//                if(chars[j]==' '){
-//                    continue;
-//                }
-                if (chars[j] > chars[i]) {
-                    temp = chars[i];
-                    chars[i] = chars[j];
-                    chars[j] = temp;
-                }
+        UsingThreadClass threadFromThreadClass = new UsingThreadClass();
+        threadFromThreadClass.start();
 
-            }
-
-        }
-
-        for (int k = 0; k < chars.length; k++) {
-            if(chars[k]==' '){
-                continue;
-            }
-            System.out.print(chars[k]);
-            System.out.print(" ");
-        }
 
     }
+}
 
+class UsingThreadClass extends Thread{
+
+    public void run(){
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("This Thread is spun using Thread class");
+        System.out.println("Current Thread: "+ Thread.currentThread().getName());
+
+    }
+}
+
+class UsingRunnableInterface implements Runnable{
+
+    public void run(){
+
+        System.out.println("This Thread is spun using Runnable Interface");
+        System.out.println("Current Thread: "+ Thread.currentThread().getName());
+    }
 }
