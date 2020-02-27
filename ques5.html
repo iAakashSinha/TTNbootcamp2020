@@ -51,16 +51,21 @@
         //--------------------------------------------------------------------------------------------------------------
         //Question 3 group employee on the basis of their age
 
-            const groupeddata ={};
-            listOfEmployeeObject.foreach((val) =>{
-                if(groupeddata[val.age]){
-                    groupeddata[val.age].push(val);
+            function GroupByAge() {
+            var result = {};
+            for(let i = 0;i<listOfEmployeeObject.length;i++){
+                if(result[listOfEmployeeObject[i].age]){
+                    result[listOfEmployeeObject[i].age].push(listOfEmployeeObject[i].name);
+                }else {
+                    result[listOfEmployeeObject[i].age]=[listOfEmployeeObject[i].name];
                 }
-                else{
-                    groupeddata[val.age]=[val];
-                }
-            });
-            groupeddata;
+            }
+            return result;
+        }
+        var a = GroupByAge();
+        console.log(a);
+
+
 
 
 
