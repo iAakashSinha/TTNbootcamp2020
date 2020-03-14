@@ -1,2 +1,4 @@
 rootProject.name = 'Java Gradle Exercise'
+include 'show-date'
+include 'show-date'
 
